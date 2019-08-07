@@ -1,6 +1,6 @@
 function balikString(str) {
     var temp = '';
-    for(i = str.length-1; i >= 0; i--) {
+    for(var i = str.length-1; i >= 0; i--) {
         temp += str[i];
     }
     return temp;
