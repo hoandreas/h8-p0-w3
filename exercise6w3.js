@@ -1,19 +1,21 @@
 function angkaPalindrome(num) {
-    var str = num.toString();
+    if ((num < 10)&&(num > 0)) {
+        return num + 1
+    } else {
+        while(true){
+            num++;
+            var str = num.toString();
+            var temp = '';
+            for(var i = str.length-1 ; i >= 0 ; i--){
+                temp+=str[i]
 
-    for(i = 0; i < str.length/2; i++) {
-        var firstChar = str[i];
-        var lastChar = str[str.length-i-1]
-        if(firstChar !== lastChar) {
-            console.log(firstChar);
-            console.log(lastChar);
-            return false;
-        } else {
-            return true;
+                if (str == temp) {
+                    return parseInt(temp);
+                }
+            }
         }
     }
-    
-  }
+}
   
   // TEST CASES
   console.log(angkaPalindrome(8)); // 9

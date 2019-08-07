@@ -1,13 +1,24 @@
 function palindrome(kata) {
-    var ceiled = Math.ceil(kata.length/2);
-    for (var i = 0; i < ceiled; i++){ 
+    for (var i = 0; i < kata.length/2; i++){ 
         if(kata[i] !== kata[kata.length-i-1]) {
             return false;
-        } else if (kata[i] === kata[kata.length-i-1] && i+1 === ceiled) {
-            return true;
-        }
+        } 
     }
+    return true;
 }
+
+// function palindrome(kata) {
+//     var temp = '';
+//     for(var i = kata.length-1; i >= 0; i--) {
+//         temp += kata[i];
+//     }
+//     if(temp == kata) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
   // TEST CASES
   console.log(palindrome('katak')); // true
   console.log(palindrome('blanket')); // false
