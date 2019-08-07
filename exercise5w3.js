@@ -1,3 +1,5 @@
+// CARA 1
+
 function palindrome(kata) {
     for (var i = 0; i < kata.length/2; i++){ 
         if(kata[i] !== kata[kata.length-i-1]) {
@@ -6,6 +8,8 @@ function palindrome(kata) {
     }
     return true;
 }
+
+// CARA 2
 
 // function palindrome(kata) {
 //     var temp = '';

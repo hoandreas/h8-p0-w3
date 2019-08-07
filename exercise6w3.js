@@ -1,40 +1,22 @@
-// function angkaPalindrome(num) {
-//     if ((num < 10)&&(num > 0)) {
-//         return num + 1
-//     } else {
-//         while(true){
-//             num++;
-//             var str = num.toString();
-//             var temp = '';
-//             for(var i = str.length-1 ; i >= 0 ; i--){
-//                 temp+=str[i]
-
-//                 if (str == temp) {
-//                     return parseInt(temp);
-//                 }
-//             }
-//         }
-//     }
-// }
-
 function angkaPalindrome(num) {
     if ((num < 10)&&(num > 0)) {
         return num + 1
     } else {
         while(true){
-            num++
+            num++;
             var str = num.toString();
-            var temp = ''
-            for (var i = 0; i < str.length/2; i++){
-                temp += str[i]
-                if(str == temp) {
+            var temp = '';
+            for(var i = str.length-1 ; i >= 0 ; i--){
+                temp+=str[i]
+
+                if (str == temp) {
                     return parseInt(temp);
                 }
             }
         }
     }
 }
-  
+
   // TEST CASES
   console.log(angkaPalindrome(8)); // 9
   console.log(angkaPalindrome(10)); // 11
